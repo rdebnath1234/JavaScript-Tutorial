@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Oddeven program</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let evenSum = 0;
+      let evenCount = 0;
+      let oddSum = 0;
+      let oddCount = 0;
+
+      for (let i = 1; i <= 100; i++) {
+        if (i % 2 === 0) {
+          evenSum += i;
+          evenCount++;
+        } else {
+          oddSum += i;
+          oddCount++;
+        }
+      }
+      const evenAverage = evenSum / evenCount;
+      const oddAverage = oddSum / oddCount;
+
+      console.log("Sum of even numbers:", evenSum);
+      console.log("Sum of odd numbers:", oddSum);
+      console.log("Count of even numbers:", evenCount);
+      console.log("Count of odd numbers:", oddCount);
+      console.log("Average of even numbers:", evenAverage);
+      console.log("Average of odd numbers:", oddAverage);
+    </script>
+  </body>
+</html>

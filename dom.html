@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Example</title>
+  </head>
+  <body>
+    <!-- Create a div element: -->
+    <div id="parent">
+      <div id="child1">First Child</div>
+      <div id="child2">Second Child</div>
+      <div id="child3">Third Child</div>
+    </div>
+
+    <script>
+      // Accessing the div element with id "parent"
+      var parentDiv = document.getElementById("parent");
+      // Accessing the first child div
+      var childDiv1 = document.getElementById("child1");
+      // Accessing the second child div
+      var childDiv2 = document.getElementById("child2");
+      // Accessing the third child div
+      var childDiv3 = document.getElementById("child3");
+      console.log(parentDiv);
+      console.log(childDiv1);
+      console.log(childDiv2);
+      console.log(childDiv3);
+
+      // Finding child of div
+      var childOfDiv = parentDiv.children;
+      // Accessing first child of div
+      var firstChildOfDiv = parentDiv.firstElementChild;
+      // Accessing last child of div
+      var lastChildOfDiv = parentDiv.lastElementChild;
+      console.log(childOfDiv);
+      console.log(firstChildOfDiv);
+      console.log(lastChildOfDiv);
+
+      // Siblings of div
+      var siblingsOfDiv = parentDiv.nextElementSibling;
+      // Siblings of div's child
+      var siblingsOfChild = childDiv1.nextElementSibling;
+      console.log(siblingsOfDiv);
+      console.log(siblingsOfChild);
+
+      // Add a class to div's child and remove it
+      childDiv1.classList.add("someClass");
+      childDiv1.classList.remove("someClass");
+      // Check if an element has a specific class
+      var doesHaveClass = childDiv1;
+      console.log(doesHaveClass.classList.contains("someClass"));  // false
+
+      // Append method
+      var newDiv = document.createElement("div");
+      newDiv.textContent = "New Element Appended";
+      parentDiv.appendChild(newDiv);
+
+      // Prepend method
+      var newDiv2 = document.createElement("div");
+      newDiv2.textContent = "New Element Prepended";
+      parentDiv.prepend(newDiv2);
+
+      // Changing element style using JavaScript
+      childDiv1.style.color = "red";
+      childDiv2.style.backgroundColor = "blue";
+    </script>
+  </body>
+</html>

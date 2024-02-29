@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Example</title>
+  </head>
+  <body>
+    <div id="content">
+      <p>This is a paragraph element.</p>
+      <span>This is a span element.</span>
+    </div>
+    <h1 id="head1">This is header element</h1>
+    <h3 id="head2">This is header 3 element</h3>
+    <script>
+      // Accessing the document's head
+      var head = document.head;
+      console.log("Head Element:", head);
+      // Accessing the document's body
+      var body = document.body;
+      console.log("Body Element:", body);
+      // Accessing the next sibling of the body element
+      var nextSiblingOfBody = document.body.nextSibling;
+      console.log("Next Sibling of Body:", nextSiblingOfBody);
+
+      // Accessing the second child node of the body element
+      var secondChildNode = document.body.childNodes[1];
+      console.log("Second Child Node of Body:", secondChildNode);
+      console.log(
+        "Text Content of Second Child Node:",
+        secondChildNode.textContent
+      );
+      // Accessing the children of the content div
+      var contentDivChildren = document.getElementById("content").children;
+      console.log("Children of Content Div:", contentDivChildren);
+      let header = document.getElementById("head2");
+      console.log(header.previousElementSibling);
+      console.log(header.nextElementSibling);
+
+      let abc = document.createElement("div");
+      document.body.prepend(abc);
+      abc.innerHTML = "This is a child div";
+      abc.classList.add("Hello");
+      //abc.classList.remove("Hello");
+      // Check if an element has a specific class
+      var doesHaveClass = abc;
+      console.log(doesHaveClass.classList.contains("Hello"));  // true
+
+    </script>
+  </body>
+</html>

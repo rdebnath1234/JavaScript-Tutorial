@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- এই কোডে "viewport" মেটা ট্যাগ ব্যবহার করা হয়েছে। এটি ওয়েব পেজের প্রদর্শন
+    প্রযুক্তিকে নির্দেশ করে। "viewport" মোবাইল ডিভাইস স্ক্রিনের প্রদর্শন
+    সম্পর্কে সেটাপ করে। "width=device-width" ব্যবহার করে ডিভাইসের প্রস্থ সাইজের
+    সমানুপাতিক প্রস্থ সেট করে এবং "initial-scale=1" ব্যবহার করে এটি প্রথম লোডের
+    সময় ডিভাইসের স্কেল সেট করে। -->
+    <title>Event</title>
+  </head>
+  <body>
+    <!-- <h1
+      class="hoverable"
+      onmouseover="handleMouseOver()"
+      onmouseout="handleMouseOut()"
+    >
+      Hover over me!
+    </h1> -->
+    <!-- <p id="myText" ondblclick="changeColor()">
+      Double click me to change my color!
+    </p> -->
+    <script>
+      //   let hoverCount = 0;
+      //   function handleMouseOver() {
+      //     hoverCount++;
+      //     alert("You have hovered over this element " + hoverCount + " times!");
+      //     console.log(`Hover count: ${hoverCount}`);
+      //   }
+      //   function handleMouseOut() {
+      //     console.log("Mouse out!");
+      //   }
+      //   function changeColor() {
+      //     var textElement = document.getElementById("myText");
+      //     // Change text color to red
+      //     textElement.style.color = "red";
+      //   }
+      // Example array
+      const myArray = [10, 20, 30];
+
+      // Using for...in loop to iterate over object properties
+      console.log("Using for...in loop with object:");
+      for (const key in myArray) {
+        console.log(key + ": " + myArray[key]);
+      }
+
+      // Using for...of loop to iterate over array elements
+      console.log("\nUsing for...of loop with array:");
+      for (const element of myArray) {
+        console.log(element);
+      }
+    </script>
+  </body>
+</html>
