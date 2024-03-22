@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Advance JS</title>
+  </head>
+  <body>
+    <script>
+      const url =
+        "https://tomorrow-io1.p.rapidapi.com/v4/weather/forecast?location=42.15%2C%2082%2C1&timesteps=1h&units=metric";
+      const options = {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key":
+            "757b391dcemshb709cfc38dbe56bp14ccd7jsn0361ae651810",
+          "X-RapidAPI-Host": "tomorrow-io1.p.rapidapi.com",
+        },
+      };
+      fetch(url, options)
+        .then((response) => response.json())
+        .then((value) => console.log(value));
+      
+    </script>
+  </body>
+</html>

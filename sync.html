@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Synchronous Example</title>
+  </head>
+  <body>
+    <script>
+      // Simulated weather data for Kolkata and Bengaluru
+      const weatherData = {};
+      // Simulating delayed initialization using setTimeout
+      setTimeout(() => {
+        weatherData.kolkata = { temperature: 30 };
+        console.log("Kolkata temperature initialized.");
+      }, 5000); // 5 seconds delay
+      // Simulating delayed initialization using setTimeout
+      setTimeout(() => {
+        weatherData.bengaluru = { temperature: 25 };
+        console.log("Bengaluru temperature initialized.");
+      }, 5000); // 5 seconds delay
+      // Using Promise.resolve to fetch weather data for Kolkata and Bengaluru
+      Promise.all([
+        Promise.resolve(weatherData.kolkata),
+        Promise.resolve(weatherData.bengaluru),
+      ])
+        .then(([kolkataWeather, bengaluruWeather]) => {
+          console.log("Weather in Kolkata:", kolkataWeather);
+          console.log("Weather in Bengaluru:", bengaluruWeather);
+        })
+        .catch((error) => {
+          console.error("Error fetching weather data:", error);
+        });
+    </script>
+  </body>
+</html>

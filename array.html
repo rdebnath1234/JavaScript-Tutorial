@@ -3,28 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Array-sort</title>
+    <title>Array</title>
   </head>
   <body>
-    <script ="text/javascript">
-      function bubbleSort(arr) {
-        var len = arr.length;
-        for (var i = 0; i < len; i++) {
-          for (var j = 0; j < len - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-              // Swap elements
-              var temp = arr[j];
-              arr[j] = arr[j + 1];
-              arr[j + 1] = temp;
-            }
-          }
-        }
-        return arr;
-      }
-      // Example usage:
-      var arr = [64, 34, 25, 12, 22, 11, 90];
-      console.log("Original array:", arr);
-      console.log("Sorted array:", bubbleSort(arr));
-    </script>
+    <!-- 1. commonelement of two array, 2. greater element of an array
+    3. array destructuring -->
+    <script src="main.js"></script>
+     <!-- "call" invokes a function with a specific context and individual arguments.
+    Example: greet.call(person, arg1, arg2) 
+    
+    "apply" invokes a function with a
+    specific context and arguments passed as an array. Example:
+    greet.apply(person, [arg1, arg2]) 
+    
+    "bind" returns a new function with a
+    specified context and, optionally, pre-set arguments. Example: 
+    var boundFunc = func.bind(context, arg1, arg2) -->
+    
   </body>
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Example</title>
+  </head>
+  <body>
+    <script>
+      //   for (let i = 0; i < 10; i++) {
+      //     console.log("This is line number: " + (i + 1));
+      //   }
+      console.log("Hello World!");
+      //   let name = setTimeout(() => {
+      //     console.log("EjobIndia");
+      //   }, 3000);
+      //   clearTimeout(name);
+      //   let name2 = setInterval(() => {
+      //     console.log("EjobIndia");
+      //   }, 3000);
+      //   clearInterval(name2);
+      // setTimeout example
+      //   setTimeout(() => {
+      //     console.log(new Date().toLocaleTimeString());
+      //   }, 1000);
+      // setInterval example
+      //   setInterval(() => {
+      //     console.log(new Date().toLocaleTimeString());
+      //   }, 1000);
+      // Promise example
+      //   প্রমিস জাভাস্ক্রিপ্টে ব্যবহৃত হয় কারণ এটি কোডের অংশগুলির নির্দিষ্ট
+      //   সময়ের পরে সম্পন্ন হওয়ার জন্য ব্যবহৃত হয়। এটি প্রমাণিত বা অস্বীকৃত সংগঠিত উত্তর
+      //   ফাংশনালিটি সরবরাহ করে যা পরবর্তীতে কাজ করা যেতে পারে।
+      const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Done");
+        }, 1000);
+      });
+      myPromise.then((result) => {
+        console.log(result);
+      });
+      let a = 20;
+      let b = 10;
+      let promise = new Promise((resolve, reject) => {
+        if (a > b) {
+          resolve(10);
+        } else {
+          reject(20);
+        }
+      });
+      promise.then((value) => {
+        console.log(value);
+      });
+      promise.catch((error) => {
+        console.log(error);
+      });
+      // এখানে দুটি প্রমিস ব্যবহার করা হয়েছে। প্রথম প্রমিস একটি সময়ের পরে সম্পন্ন হয়ে যাওয়ার পরিবর্তে "Done" রিজল্ট রিসল্ভ করে।
+      //  দ্বিতীয় প্রমিসে, যদি a বড় b হয় তবে এটি সফল হবে এবং মান 10 রিসল্ভ করবে,
+      //   অন্যথায় এটি অসফল হবে এবং 20 রিজেক্ট করবে।
+      //   তারপরে এই রিজেক্ট অথবা সফল হওয়ার সাথে সম্পর্কিত থেকে আলাদা আলাদা then
+      //    এবং catch হ্যান্ডলার ব্যবহার করা হয়েছে যাতে সফলভাবে সম্পন্ন হওয়া গেলে মান লগ করা যায়
+      //    এবং অসফল হওয়া গেলে ত্রুটি লগ করা যায়।
+      //Promise api
+      //promise.all
+      let promise1 = Promise.resolve(3);
+      let promise2 = Promise.resolve(4);
+      let promise3 = Promise.resolve(5);
+      let promise4 = Promise.all([promise1, promise2, promise3]).then(
+        (value) => {
+          console.log(value);
+        }
+      );
+      console.log(promise4);
+
+      //   let promise1=Promise.reject(3)
+      //   let promise2=Promise.resolve(4)
+      //   let promise3=Promise.resolve(5)
+      //   let promise4=Promise.any([promise1,promise2,promise3]).then((value)=>{console.log(value)})
+      //   console.log(promise4)
+
+      //   let promise3 = new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       resolve(23);
+      //     }, 7000);
+      //   });
+      //   let promise4 = new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       resolve(25);
+      //     }, 5000);
+      //   });
+
+      //   let promise5 = Promise.race([promise3, promise4]).then((value) => {
+      //     console.log(value);
+      //   });
+      //   console.log(promise5);
+    </script>
+  </body>
+</html>

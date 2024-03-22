@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Advance JS</title>
+  </head>
+  <body>
+    <script>
+      //     let obj={
+      //         name:'Joy',
+      //         age:25,
+      //         location:"Habra",
+      //      fetchname(){
+      //            return this.name
+      //         },
+      //      fetchage(){
+      //            return this.age
+      //        }
+      //     }
+      //     let obj2={
+      //         name:'Kishor',
+      //         age:27,
+      //         location:"Habra",
+      //       fetchname(){
+      //            return this.name
+      //         }
+      //     }
+      //     obj2.__proto__=obj
+      //     console.log(obj2.fetchage())
+      // console.log(obj.fetchname())
+      //Define class
+      // class abc {
+      //   constructor(name, age) {
+      //     this.name = name;
+      //     this.age = age;
+      //   }
+
+      //   fetchname() {
+      //     return this.name;
+      //   }
+      //   fetchage() {
+      //     return this.age;
+      //   }
+      // }
+      // var obj = new abc("Koushik", 25);
+      // console.log(obj.name);
+      // console.log(obj.age);
+      // console.log(obj.fetchname());
+      // console.log(obj.fetchage());
+      class employee{
+          constructor(name,age,id){
+              this.name=name
+              this.age=age
+              this.id=id
+          }
+          showname(){
+              return this.name
+          }
+          showage(){
+              return this.age
+          }
+          showid(){
+              return this.id
+          }
+      }
+      let emp1=new employee("Joy",'25',"0001");
+      let emp2=new employee("Anand",'23',"0002");
+      let emp3=new employee("Kishor",'25',"0003");
+      let emp4=new employee("Sayandip",'25',"0004");
+      let emp5=new employee("Ritam",'25',"0005");
+      let emp6=new employee("Gourav",'25',"0006");
+      let emp7=new employee("Sutirtha",'25',"0007");
+      let emp8=new employee("Riya",'25',"0008");
+      let emp9=new employee("Koushik",'25',"0009");
+      let emp10=new employee("Sumas",'25',"0010");
+      console.log(emp1)
+      console.log(emp2)
+      console.log(emp3)
+      console.log(emp4)
+      console.log(emp5)
+      console.log(emp6)
+      console.log(emp7)
+      console.log(emp8)
+      console.log(emp9)
+      console.log(emp10)
+
+      class parent {
+        constructor(id, name, age) {
+          this.id;
+          this.name = name;
+          this.age = age;
+        }
+        setname() {
+          return this.name;
+        }
+        setage() {
+          return this.age;
+        }
+      }
+
+      class child extends parent {
+        constructor(id, name, age) {
+          super();
+          this.id = id;
+          this.name = name;
+          this.age = age;
+        }
+      }
+      let obj = new child("24", "koushik", 25);
+      console.log(obj);
+    </script>
+  </body>
+</html>

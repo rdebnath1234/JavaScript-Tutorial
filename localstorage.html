@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Advance JS</title>
+  </head>
+  <body>
+    <script>
+      // Storing data in localStorage
+      localStorage.setItem("city", "Kolkata");
+      localStorage.setItem("city1", "Bengaluru");
+      // Retrieving data from localStorage
+      const value1 = localStorage.getItem("city");
+      console.log(value1); // Output: Kolkata
+      // Removing data from localStorage
+      localStorage.removeItem("city1");
+      // Clearing all data from localStorage
+      localStorage.clear();
+
+      // Storing data in sessionStorage
+      sessionStorage.setItem("you", "me");
+      // Retrieving data from sessionStorage
+      const value2 = sessionStorage.getItem("you");
+      // Removing data from sessionStorage
+      sessionStorage.removeItem("you");
+      // Clearing all data from sessionStorage
+      sessionStorage.clear();
+    </script>
+  </body>
+</html>
